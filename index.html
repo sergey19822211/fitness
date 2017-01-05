@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fitness</title>
+
+    <!-- Animate -->
+    <link href="animate/animate.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+    <!-- Select in modal-->
+	<link rel="stylesheet" type="text/css" href="select in modal/css/cs-select.css" />
+	<link rel="stylesheet" type="text/css" href="select in modal/css/cs-skin-elastic.css" />
+
+	<!-- My Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Owl_Carousel -->
+    <link href="owl_carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl_carousel/owl.theme.css" rel="stylesheet">
+
+    <!-- Fixed Menu -->
+	<link rel="stylesheet" type="text/css" href="fixed_menu/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="fixed_menu/css/style1.css" />
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+
+  </head>
+  <body>
+
+ 
+    
+    <div class="header_section fadeIn animated">
+    <!--======================================================Верхнее меню =================================================-->
+      <div class="container">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Intro</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#" class = "modal_btn" data-toggle="modal" data-target="#myModal">Sign Up</a></li>
+              </ul>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h3 class = "modal_title">Sign Up</h3>
+                    </div>
+                    <div class="modal-body">
+                      <form action="" method="" class = "modal_form">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="exampleInputName2" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">                       
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Adress">
+                        </div>										
+						<section>
+							<select class="cs-select cs-skin-elastic">
+								<option value="" disabled selected>Pricing Plan</option>
+								<option value="france" data-class="flag-france">1 month membership ($150)</option>
+								<option value="brazil" data-class="flag-brazil">3 month membership ($350)</option>
+								<option value="argentina" data-class="flag-argentina">1 year membership ($1000)</option>
+								<option value="south-africa" data-class="flag-safrica">Free trial class</option>
+							</select>
+						</section>                       
+                          <label>
+						    <input class="checkbox" type="checkbox" name="checkbox-test">
+						    <span class="checkbox-custom"></span>
+						    <span class="label">I Agree to the <strong>Terms & Conditions</strong></span>
+						  </label>                       
+                          <br />
+                        <button type="submit" class="btn btn-default submit">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Modal-->
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+
+
+ 
+
+
+
+      <div class="container">
+        <div class="header_text">
+          <h3>Take care of your body.</h3>
+          <h1 class = "intro">It's the only place you have to live.</h1>
+        </div>
+      </div>
+    </div>
+
+ <!--==========================Меню при прокрутке============================= -->
+ <!--адаптивное меню, которое появится на моб. устройствах -->
+
+        <div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<ul>
+					<li><a href="#">Intro</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Team</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#"  id = "go" >Sign Up</a></li>
+				</ul>
+			</nav>
+		</div>
+
+<!-- Фиксированное меню, которое появляется при прокрутке -->
+<div class="fixed_menu">
+	<div class = "container">
+		<div class="logo_block">
+			<img src="img/logo-active.png" alt="">
+		</div>
+			<ul class="scroll_menu">
+				<li><a href="">Intro</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Team</a></li>
+				<li><a href="">Pricing</a></li>
+				<li><a href="#" class = "modal_btn" id = "go" >Sign Up</a></li>
+			</ul>
+	</div> 
+	<i class="fa fa-bars" id="trigger-overlay" aria-hidden="true"></i>
+	</div>
+
+<!-- Модальное окно, которое появл. с фиксированного меню -->
+<div id="modal_form"><!-- Сaмo oкнo --> 
+      <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+      <!-- Тут любoе сoдержимoе -->
+			<div class="modal-body">
+                      <form action="" class = "modal_form">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="exampleInputName2" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">                       
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Adress">
+                        </div>										
+						<section>
+							<select class="cs-select cs-skin-elastic">
+								<option value="" disabled selected>Pricing Plan</option>
+								<option value="france" data-class="flag-france">1 month membership ($150)</option>
+								<option value="brazil" data-class="flag-brazil">3 month membership ($350)</option>
+								<option value="argentina" data-class="flag-argentina">1 year membership ($1000)</option>
+								<option value="south-africa" data-class="flag-safrica">Free trial class</option>
+							</select>
+						</section>                       
+                          <label>
+						    <input class="checkbox" type="checkbox" name="checkbox-test">
+						    <span class="checkbox-custom"></span>
+						    <span class="label">I Agree to the <strong>Terms & Conditions</strong></span>
+						  </label>                       
+                          <br />
+                        <button type="submit" class="btn btn-default submit">Submit</button>
+                      </form>
+                    </div>
+      <!-- /Тут любoе сoдержимoе -->
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+     
+<!-- ===================================================================================================== -->
+
+<!-- ==================================================================== -->
+  
+    <div class="table_section">
+    	<div class="container">
+    		<div class="col-md-4">
+    			<div class="pricing_plan1 pricing_plan_animate animated boxHidded">
+    			<h5 class = "pricing_plan">Today's Exercise</h5>
+    				<div id="owl-demo" class="owl-carousel">
+		                <div class="item">
+							<div class="time_plan">
+								<h5 class = "name_time">Early Exercise</h5>							
+								<h5 class = "time">8:30 - 10:00</h5>			
+							</div>
+							<div class="time_plan">
+								<h5 class = "name_time">Muscle Building</h5>							
+								<h5 class = "time">8:30 - 10:00</h5>
+							</div>
+							<div class="time_plan">
+								<h5 class = "name_time">Cardio</h5>
+								<h5 class = "time">8:30 - 10:00</h5>
+							</div>
+		                </div>
+		                <div class="item">
+		                	<div class="time_plan">
+								<h5 class = "name_time">Early Exercise</h5>							
+								<h5 class = "time">8:30 - 10:00</h5>			
+							</div>
+							<div class="time_plan">
+								<h5 class = "name_time">Muscle Building</h5>							
+								<h5 class = "time">8:30 - 10:00</h5>
+							</div>
+							<div class="time_plan">
+								<h5 class = "name_time">Cardio</h5>
+								<h5 class = "time">8:30 - 10:00</h5>
+							</div>
+		                </div>
+		                <div class="item">
+		                	<div class="time_plan">
+								<h5 class = "name_time">Early Exercise</h5>							
+								<h5 class = "time">8:30 - 10:00</h5>			
+							</div>
+							<div class="time_plan">
+								<h5 class = "name_time">Muscle Building</h5>							
+								<h5 class = "time">8:30 - 10:00</h5>
+							</div>
+							<div class="time_plan">
+								<h5 class = "name_time">Cardio</h5>
+								<h5 class = "time">8:30 - 10:00</h5>
+							</div>
+		                </div>
+	                </div>
+    			</div>
+    		</div>
+    		<div class="col-md-4">
+    			<div class="pricing_plan2 pricing_plan_animate animated boxHidded">
+    				<h5>Premium Membership</h5>
+					<div class="discount">
+						<h4>Register Today</h4>
+    				    <h4><strong>20% Discount</strong></h4>
+					</div>
+					<a href="#" class = "register_button bounceIn animated">
+						Register
+					</a>
+    			</div>
+    		</div>
+    		<div class="col-md-4">
+    			<div class="pricing_plan3 pricing_plan_animate animated boxHidded">
+    			<h5 class = "pricing_plan">Today's Exercise</h5>
+    				<div id="owl" class="owl-carousel">
+		                <div class="item">
+							<div class="client">
+								<h4>I couldn't be more happy width the results!</h4>
+								<h5>Adam Jordan</h5>
+							</div>
+		                </div>
+		                <div class="item">
+		                	<div class="client">
+								<h4>I can't believe how much better I feel!</h4>
+								<h5>Adam Jordan</h5>
+							</div>
+		                </div>
+		                <div class="item">
+		                	<div class="client">
+								<h4>Incredible transformation and I feel so healthy!</h4>
+								<h5>Adam Jordan</h5>
+							</div>
+		                </div>
+	                </div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+<!-- ============================================================services section================================================================== -->
+          
+	<div class="services_section">
+		<div class="container services_team_title">
+			<h2>Services</h2>
+			<p>Achieve the best results with our wide variety of training options!</p>
+		</div>
+		<div class="container services">
+			<div class="col-md-4">
+				<div class="services_block services_block1 animated boxHidded">
+					<div class = "services_img">
+						<img src="img/heart-blue.png" alt="">
+					</div>
+					<h4>Cardio Training</h4>
+					<p class = "bounceIn animated">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="services_block services_block2 animated boxHidded">
+					<div class = "services_img">
+						<img src="img/guru-blue.png" alt="">
+					</div>
+					<h4>Cardio Training</h4>
+					<p class = "bounceIn animated">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="services_block services_block3 animated boxHidded">
+					<div class = "services_img">
+						<img src="img/weight-blue.png" alt="">
+					</div>
+					<h4>Cardio Training</h4>
+					<p class = "bounceIn animated">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+          
+<!-- =======================================================================================team section======================================================================================= -->
+
+	<div class="team_section">
+		<div class="container services_team_title">
+			<h2>Team</h2>
+			<p>We're dream team!</p>
+		</div>
+		<div class="container team">
+			<div class="col-md-4">
+				<div class="team_block animated boxHidded delay-05s">
+					<div class="team_cover1">
+						<div class="team_overlay">
+							<h3>$69.00</h3>
+							<h5>1 -5 session / month</h5>
+						</div>
+					</div>
+						<div class = "title_name_block">
+							
+								<img src="img/team3.jpg" alt="" class = "face">
+						
+							<div class="title_name">
+								<h4>Ben Adamson</h4>
+								<h5>Fitness Instructor</h5>
+							</div>
+							<a href="#" class = "sign">Sign Up Now</a>
+						</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="team_block animated boxHidded delay-1s">
+					<div class="team_cover2">
+						<div class="team_overlay">
+							<h3>$69.00</h3>
+							<h5>1 -5 session / month</h5>
+						</div>
+					</div>
+						<div class = "title_name_block">
+							
+								<img src="img/team1.jpg" alt="" class = "face">
+							
+							<div class="title_name">
+								<h4>Ben Adamson</h4>
+								<h5>Fitness Instructor</h5>
+							</div>
+							<a href="#" class = "sign">Sign Up Now</a>
+						</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="team_block animated boxHidded delay-15s">
+					<div class="team_cover3">
+						<div class="team_overlay">
+							<h3>$69.00</h3>
+							<h5>1 -5 session / month</h5>
+						</div>
+					</div>
+						<div class = "title_name_block">
+							
+								<img src="img/team2.jpg" alt="" class = "face">
+							
+							<div class="title_name">
+								<h4>Ben Adamson</h4>
+								<h5>Fitness Instructor</h5>
+							</div>
+							<a href="#" class = "sign" data-toggle="modal" data-target="#myModal">Sign Up Now</a>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ====================================================pricing section====================================================================================== -->
+	<div class="pricing_section">
+		<div class = "container pricing_title">
+			<h2>Pricing</h2>
+			<h4>Choose your favorite pricing plan and sign up today!</h4>
+		</div>
+		<div class="container pricing_choise">
+<!-- ================================================================smena_blokov_big_size================================================================ -->
+			<div class="col-md-7 col-md-offset-5 smena_blokov_big_size">
+				<div class="yoga">
+					<div class="left_yoga" data-click="0">
+						<h4>Yoga Pilates</h4>
+						<h5>$100.00 / year</h5>
+						<a href="#" class = "pricing_sign">Sign Up Now</a>
+					</div>
+					<div class="right_yoga">
+						<ul>
+							<li>One Personal Trainer</li>
+							<li>Big gym space for training</li>
+							<li>Free tools & props</li>
+							<li>Free locker</li>
+							<li>Free before / after shower</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="cardio" >
+					<div class="left_cardio" data-click="0">
+						<h4>Cardio Training</h4>
+						<h5>$850.00 / year</h5>
+						<a href="#" class = "pricing_sign">Sign Up Now</a>
+					</div>
+
+					<div class="right_cardio"> 
+						<ul>
+							<li>One Personal Trainer</li>
+							<li>Big gym space for training</li>
+							<li>Free tools & props</li>
+							<li>Free locker</li>
+							<li>Free before / after shower</li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+	<div class="clear" style = "clear:both;"></div>
+<!-- ====================================================pricing section small size====================================================================================== -->
+            <div class="col-md-12 smena_blokov_small_size">
+            	<div class="yoga_small_top" data-click="0">
+            		<h4>Yoga Pilates</h4>
+					<h5>$100.00 / year</h5>
+					<a href="#" class = "pricing_sign">Sign Up Now</a>
+            	</div>
+            	<div class="yoga_small_bottom">
+            		<ul>
+						<li>One Personal Trainer</li>
+						<li>Big gym space for training</li>
+						<li>Free tools & props</li>
+						<li>Free locker</li>
+						<li>Free before / after shower</li>
+					</ul>
+            	</div>
+            	<div class="cardio_small_top" data-click="0">
+            		<h4>Cardio Training</h4>
+					<h5>$800.00 / year</h5>
+					<a href="#" class = "pricing_sign">Sign Up Now</a>
+            	</div>
+            	<div class="cardio_small_bottom">
+            		<ul>
+						<li>One Personal Trainer</li>
+						<li>Big gym space for training</li>
+						<li>Free tools & props</li>
+						<li>Free locker</li>
+						<li>Free before / after shower</li>
+					</ul>
+            	</div>
+            </div>
+		</div>
+	</div>
+
+<!-- =============bottom slider section============================================================================================================================= -->
+
+	<div class="bottom_slider_section">
+		<div class="container">
+			<div id="owl_carousel_bottom">
+			  <div class="slider_bottom_item">
+			  	<i class="fa fa-twitter" aria-hidden="true"></i>
+			  	<h4>To enjoy the glow of good health, you must exercize</h4>
+			  	<h4 class = "hashtags">#health #training #exercise</h4>
+		  	</div>
+			  <div class="slider_bottom_item">
+			  	<i class="fa fa-twitter" aria-hidden="true"></i>
+			  	<h4>To enjoy the glow of good health, you must exercize</h4>
+			  	<h4 class = "hashtags">#health #training #exercise</h4>
+		  	</div>
+			  <div class="slider_bottom_item">
+			  	<i class="fa fa-twitter" aria-hidden="true"></i>
+			  	<h4>To enjoy the glow of good health, you must exercize</h4>
+			  	<h4 class = "hashtags">#health #training #exercise</h4>
+		  	</div>
+			</div>
+
+		</div>
+	</div>
+
+
+<!-- ========================================================================================================================================== -->
+
+	<div class="footer_section">
+		<div class="container">
+			<div class="col-md-6 left_footer">
+				<h3>Reserve a Free Trial Class!</h3>
+				<h5>Shape your body and improve your health.</h5>
+				<a href="#" class = "pricing_sign">Sign Up Now</a>
+			</div>
+			<div class="col-md-6 right_footer">
+				<div class="row">
+					<h3>Opening Hours</h3>
+					<div class="green_circle"></div>
+					<div class="green_circle_in"></div>
+				</div>
+				<div class="row grafik">
+					<div class="col-sm-6" style = "margin-left: -15px;">
+						<h5>Mon - Fri</h5>
+						<h3>9:00 - 22:00</h3>
+					</div>
+					<div class="col-sm-6">
+						<h5>Sat - Sun</h5>
+						<h3>10:00 - 18:00</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ========================================================================================================================================== -->
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- animate_text -->
+    <script type="text/javascript" src="animate_text/jquery.flipping_text.js"></script>   
+    <script type="text/javascript">
+        $(".intro").flipping_text({
+        tickerTime: 10,
+        customRandomChar: false,
+        tickerCount: 10,
+        opacityEffect: true,
+        resetOnChange: false
+        });
+    </script>
+
+    <!-- Select in modal-->
+	<script src="select in modal/js/classie.js"></script>
+	<script src="select in modal/js/selectFx.js"></script>
+	<script>
+		(function() {
+			[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+				new SelectFx(el);
+			} );
+		})();
+	</script>
+
+	<!-- Owl_Carousel --> 
+    <script src="owl_carousel/owl.carousel.js"></script>
+	<script>
+    $(document).ready(function() {
+	      $("#owl-demo").owlCarousel({
+	      navigation : false,
+	      slideSpeed : 300,
+	      paginationSpeed : 400,
+	      singleItem : true
+      });
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+	      $("#owl").owlCarousel({
+	      navigation : false,
+	      slideSpeed : 300,
+	      paginationSpeed : 400,
+	      singleItem : true
+      });
+    });
+    </script>
+	<script>
+		$(document).ready(function() {
+		$("#owl_carousel_bottom").owlCarousel({
+		navigation : false, // Show next and prev buttons
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true
+		}); 
+	});
+	</script>
+
+	<!-- Fixed Menu -->
+	<script src="fixed_menu/js/modernizr.custom.js"></script>
+	<script src="fixed_menu/js/classie.js"></script>
+	<script src="fixed_menu/js/demo1.js"></script>
+	<script type="text/javascript">
+				jQuery(function(f){
+				var element = f('.fixed_menu');
+				f(window).scroll(function(){
+				element['fade'+ (f(this).scrollTop() > 200 ? 'In': 'Out')](500);           
+			});
+		});
+	</script>
+
+	<!-- модальное окно, которое появл. из фикс. меню -->
+	<script type="text/javascript">
+		$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+			$('a#go').click( function(event){ // лoвим клик пo ссылки с id="go"
+						event.preventDefault(); // выключaем стaндaртную рoль элементa
+						$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+						function(){ // пoсле выпoлнения предъидущей aнимaции
+						$('#modal_form') 
+						.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+						.animate({opacity: 1, top: '30%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+					});
+				});
+				/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+						$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+						$('#modal_form')
+						.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+						function(){ // пoсле aнимaции
+						$(this).css('display', 'none'); // делaем ему display: none;
+						$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+					}
+				);
+			});
+		});
+	</script>
+
+	
+
+	<!-- animate. waypoints. Делаем анимацию блоков и элементов при скролле -->
+	<script src="font-awesome-4.7.0/jquery.waypoints.js"></script>
+	<script>
+        $('.pricing_plan_animate')
+          .waypoint( function(dir){
+
+            if ( dir === 'down')
+            $(this)
+                .removeClass('fadeOutDown')
+                .addClass('fadeInUp');
+            else
+               $(this)
+                    .removeClass('fadeInUp')              
+                    .addClass('fadeOutDown'); 
+        }, {
+            offset: '90%'
+        })
+          .waypoint(function(dir){
+            if (dir === 'down')
+                $(this)
+                    .removeClass('fadeInUp')              
+                    .addClass('fadeOutDown');
+            else
+                $(this)
+                    .removeClass('fadeOutDown')
+                    .addClass('fadeInUp');
+
+              }, {
+            offset: -20
+          });
+    </script>
+
+    <script>
+        $('.services_block1')
+          .waypoint( function(dir){
+
+            if ( dir === 'down')
+            $(this)
+                .removeClass('zoomOutDown')
+                .addClass('zoomInDown');
+            else
+               $(this)
+                    .removeClass('zoomInDown')              
+                    .addClass('zoomOutDown'); 
+        }, {
+            offset: '90%'
+        })
+          .waypoint(function(dir){
+            if (dir === 'down')
+                $(this)
+                    .removeClass('zoomInDown')              
+                    .addClass('zoomOutDown');
+            else
+                $(this)
+                    .removeClass('zoomOutDown')
+                    .addClass('zoomInDown');
+
+              }, {
+            offset: -20
+          });
+    </script>
+
+   	<script>
+        $('.services_block2')
+          .waypoint( function(dir){
+
+            if ( dir === 'down')
+            $(this)
+                .removeClass('bounceOut')
+                .addClass('bounceIn');
+            else
+               $(this)
+                    .removeClass('bounceIn')              
+                    .addClass('bounceOut'); 
+        }, {
+            offset: '100%'
+        })
+          .waypoint(function(dir){
+            if (dir === 'down')
+                $(this)
+                    .removeClass('bounceIn')              
+                    .addClass('bounceOut');
+            else
+                $(this)
+                    .removeClass('bounceOut')
+                    .addClass('bounceIn');
+
+              }, {
+            offset: -20
+          });
+    </script>
+
+    <script>
+        $('.services_block3')
+          .waypoint( function(dir){
+
+            if ( dir === 'down')
+            $(this)
+                .removeClass('zoomOutDown')
+                .addClass('zoomInDown');
+            else
+               $(this)
+                    .removeClass('zoomInDown')              
+                    .addClass('zoomOutDown'); 
+        }, {
+            offset: '90%'
+        })
+          .waypoint(function(dir){
+            if (dir === 'down')
+                $(this)
+                    .removeClass('zoomInDown')              
+                    .addClass('zoomOutDown');
+            else
+                $(this)
+                    .removeClass('zoomOutDown')
+                    .addClass('zoomInDown');
+
+              }, {
+            offset: -20
+          });
+    </script>
+
+    <script>
+        $('.team_block')
+          .waypoint( function(dir){
+
+            if ( dir === 'down')
+            $(this)
+                .removeClass('bounceOut')
+                .addClass('bounceInDown');
+            else
+               $(this)
+                    .removeClass('bounceInDown')              
+                    .addClass('bounceOut'); 
+        }, {
+            offset: '100%'
+        })
+          .waypoint(function(dir){
+            if (dir === 'down')
+                $(this)
+                    .removeClass('bounceInDown')              
+                    .addClass('bounceOut');
+            else
+                $(this)
+                    .removeClass('bounceOut')
+                    .addClass('bounceInDown');
+
+              }, {
+            offset: -20
+          });
+    </script>
+
+
+
+    <!-- скрипт переключения блоков в pricing  big size-->
+	<script>
+	    $(document).ready(function(){
+	    $('.left_cardio').on('click',function(){
+	        if($(this).data('click')==0){
+	             $('.yoga').css('width','50%');
+	             $('.left_yoga').css('width','100%');
+	             $('.left_yoga').css('background','#bbb');
+	             $('.right_yoga').css('display','none');
+	             
+	         	 $('.cardio').css('width','100%');
+	         	 $('.right_cardio').css('display','block');
+	         	 $('.right_cardio').css('background','#00a8ff');
+	         	 $('.left_cardio').css('width','50%');
+	         	 $('.left_cardio').css('background','#00a8ff');
+
+	             
+
+	             $('.pricing_section').css('background-image','url(img/pricing2.jpg)');
+	             
+	             $(this).data('click','0');
+	        }
+	        else{
+	             $(this).data('click','0');
+		        } 
+		    });
+		});
+	</script>
+
+	<script>
+	    $(document).ready(function(){
+	    $('.left_yoga').on('click',function(){
+	        if($(this).data('click')==0){
+	             $('.cardio').css('width','50%');
+	             $('.right_cardio').css('display','none');
+	             $('.left_cardio').css('width','100%');
+	             $('.left_cardio').css('background','#bbb');
+
+	             $('.yoga').css('width','100%');
+	             $('.left_yoga').css('width','50%');
+	             $('.left_yoga').css('background','#00a8ff');
+	             $('.right_yoga').css('display','block');
+
+	             $('.pricing_section').css('background-image','url(img/pricing1.jpg)');
+
+	             $(this).data('click','0');
+	        }
+	        else{
+	             $(this).data('click','0');
+		        } 
+		    });
+		});
+	</script>
+    <!-- скрипт переключения блоков в pricing  small size-->
+	<script>
+	    $(document).ready(function(){
+	    $('.yoga_small_top').on('click',function(){
+	        if($(this).data('click')==0){
+	             $('.yoga_small_bottom').css('display','block');
+	             $('.cardio_small_bottom').css('display','none');
+	             
+	             
+	             $(this).data('click','1');
+	        }
+	        else{
+	        	 $('.yoga_small_bottom').css('display','none');
+	             $(this).data('click','0');
+		        } 
+		    });
+		});
+	</script>
+
+	<script>
+	    $(document).ready(function(){
+	    $('.cardio_small_top').on('click',function(){
+	        if($(this).data('click')==0){
+	             $('.yoga_small_bottom').css('display','none');
+	             $('.cardio_small_bottom').css('display','block');
+
+	             
+	             
+	             $(this).data('click','1');
+	        }
+	        else{
+	        	 $('.cardio_small_bottom').css('display','none');
+	             $(this).data('click','0');
+		        } 
+		    });
+		});
+	</script>
+
+
+  </body>
+</html>
